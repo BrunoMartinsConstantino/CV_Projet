@@ -9,12 +9,60 @@
 
 <style>
   html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+  
+  /* DARK MODE */
+  body.dark-mode {
+    background-color: #121212 !important;
+  }
+
+  /* Cartes et blocs principaux */
+  body.dark-mode .w3-white,
+  body.dark-mode .w3-card,
+  body.dark-mode .w3-card-4,
+  body.dark-mode .w3-container {
+    background-color: #1e1e1e !important;
+    color: #e0e0e0 !important;
+  }
+
+  /* Texte dans les blocs */
+  body.dark-mode h1,
+  body.dark-mode h2,
+  body.dark-mode h3,
+  body.dark-mode h4,
+  body.dark-mode h5,
+  body.dark-mode h6,
+  body.dark-mode p,
+  body.dark-mode li {
+    color: #e0e0e0 !important;
+  }
+
+  /* Empêche le fond du titre d'être assombri */
+  body.dark-mode .w3-display-bottomleft {
+  background-color: transparent !important;
+  color: #000 !important; /* texte reste noir */
+  }
+
+  /* Empêche le dark mode de changer les textes verts */
+  body.dark-mode .w3-text-teal {
+  color: #009688 !important; /* teal W3CSS */
+  }
+
+
+  /* Footer */
+  body.dark-mode footer {
+    background-color: #0d4d4d !important;
+    color: #e0e0e0 !important;
+  }
 </style>
+
 
 <body class="w3-light-grey">
 
 <!-- Page Container -->
 <div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+  <button onclick="toggleDarkMode()" class="w3-button w3-teal w3-right w3-margin">🌙 Mode sombre</button>
+
 
   <!-- The Grid -->
   <div class="w3-row-padding">
@@ -44,6 +92,7 @@
           <p>Méthode Agile (Scrum, Kanban)</p>
           <br>
 
+
           <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Langues</b></p>
           <div class="w3-row">
             <div class="w3-col s6">
@@ -71,13 +120,14 @@
       </div>
       <br>
 
-    </div>
+
     <!-- End Left Column -->
+    </div>
 
     <!-- Right Column -->
     <div class="w3-twothird">
 
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <div class="w3-container w3-card w3-white w3-margin-bottom">
         <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-address-card fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Profil</h2>
         <div class="w3-container">
           <p class="w3-justify">Passionné par le développement, j’apprécie particulièrement la logique et la rigueur que cette discipline exige. Curieux et motivé, j’aime explorer de nouveaux horizons et me lancer dans des domaines inconnus afin d’enrichir continuellement mes compétences. Toujours avide de connaissances, je souhaite élargir mon expertise et relever de nouveaux défis techniques.</p>
@@ -90,7 +140,7 @@
           <h5 class="w3-opacity"><b>IT Trainee | Nestlé S.A.</b></h5>
           <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Février 2022 - Janvier 2023</h6>
           <ul>
-            <li>Modification d'emails formatés pour les Jubilaires</li>
+            <li >Modification d'emails formatés pour les Jubilaires</li>
             <li>Développement de solution business avec Office 365 (Sharepoint, PowerApps, MS Forms, ...)</li>
             <li>Création de Dashboards sour Microsoft PowerBI</li>
             <li>Mise en place technique d'une salle de studio vidéo de streaming (OBS, Elgato, MS Teams, ...)</li>
@@ -147,6 +197,7 @@
         </div>
       </div>
 
+
       <div class="w3-white w3-text-grey w3-card-4 w3-margin-top">
         <div class="w3-container">
           <h2 class="w3-large">
@@ -168,28 +219,34 @@
           </p>
 
           <p>
-            <i class="fa fa-github fa-fw w3-margin-right w3-large w3-text-teal"></i>
-            <a href="https://github.com/BrunoMartinsConstantino" target="_blank">
-              Mon GitHub
-            </a>
-          </p>
+          <i class="fa fa-github fa-fw w3-margin-right w3-large w3-text-teal"></i>
+          <a href="https://github.com/BrunoMartinsConstantino" target="_blank">
+            Mon GitHub
+          </a>
+        </p>
 
         </div>
       </div>
       <br>
 
-    </div>
     <!-- End Right Column -->
+    </div>
     
-  </div>
   <!-- End Grid -->
-
+  </div>
+  
+  <!-- End Page Container -->
 </div>
-<!-- End Page Container -->
 
 <footer class="w3-container w3-teal w3-center w3-margin-top">
   <p>© Copyright - Bruno Martins Constantino - <a href="https://www.linkedin.com/in/brunomartinsconstantino/" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a></p>
 </footer>
+
+<script>
+  function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+  }
+</script>
 
 </body>
 </html>
