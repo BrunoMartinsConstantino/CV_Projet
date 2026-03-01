@@ -50,6 +50,7 @@ Le site est déployé automatiquement via **GitHub Pages**, configuré pour poin
 ```
 CV_Projet/
 │── index.html
+│── me.png
 │── README.md
 ```
 
